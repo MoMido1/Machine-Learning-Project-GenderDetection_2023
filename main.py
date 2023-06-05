@@ -3,6 +3,7 @@ import numpy
 from Library.lib import * 
 import seaborn as sb
 from scipy.stats import norm
+import logistic_Regression as lr
 
 
 
@@ -101,4 +102,38 @@ def features_Analysis(DTR,LTR,DTE):
 # Feature analysis and Gaussianizing the training 
 DTR_,DTE_ = features_Analysis(DTR,LTR,DTE)
 
+DTR,p,m = PCA_optimal(DTR_,0.95) 
 
+# (DTR, LTR), (DTE, LTE) = split_db_2to1(DTR, LTR)
+priors = [0.1,0.5,0.9]
+print("\n######### Logistic Regression ############")
+start = 1e-5
+stop = 1e5
+num_points = 100
+
+step = (stop - start) / (num_points - 1)
+lmd = numpy.logspace(numpy.log10(start), numpy.log10(stop),num_points)
+tot_minDCF = numpy.zeros((len(priors),len(lmd)),dtype= numpy.float32 )
+k=0
+for i in priors:   
+    print("\n\nApplication with prior of "+str(i))
+    print("------------------------------------")
+    print("K-fold")
+    print("-------------------------\n")
+    
+    for j in range(lmd.shape[0]):
+        print("Lambda : "+str(lmd[j]))
+        print("-------------------------")
+        args = [i,lmd[j],5]
+        evaluation_acc,t = Kfold(lr, DTR, LTR,args)
+        
+        tot_minDCF[k,j] = t
+    k+=1
+plt.plot(lmd, tot_minDCF[0], label='prior of 0.1', color = 'green')
+plt.plot(lmd, tot_minDCF[1], label='prior of 0.5', color = 'red')
+plt.plot(lmd, tot_minDCF[2], label='prior of 0.9', color = 'blue')
+plt.legend(loc="upper left")
+plt.xlabel('Lamda')
+plt.ylabel('minDCF LR')
+plt.xscale('log')
+plt.show()
