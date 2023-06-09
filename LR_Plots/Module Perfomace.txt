@@ -1,0 +1,91 @@
+Number of training samples for the male class: 720
+Number of training samples for the female class: 1680
+Number of features: 12
+no PCA
+single-fold
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.5 minDCF =  0.1128564764184492
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.5 minDCF =  0.11112810590475608
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.5 minDCF =  0.11635910338867689
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.1 minDCF =  0.290305065043324
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.1 minDCF =  0.3068392997805122
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.1 minDCF =  0.2800036708754273
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.9 minDCF =  0.2937388630992896
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.9 minDCF =  0.3007670600111656
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.9 minDCF =  0.27435969990593384
+PCA m = 11
+single-fold
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.5 minDCF =  0.11633616041725617
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.5 minDCF =  0.11899754510205798
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.5 minDCF =  0.11458484693214234
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.1 minDCF =  0.26928930322195793
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.1 minDCF =  0.2780458706475271
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.1 minDCF =  0.2780458706475271
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.9 minDCF =  0.30854472732278465
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.9 minDCF =  0.3320842160004283
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.9 minDCF =  0.3121620691501159
+PCA m = 10
+single-fold
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.5 minDCF =  0.17485603285433507
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.5 minDCF =  0.1802017451953594
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.5 minDCF =  0.16960209239899354
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.1 minDCF =  0.33331548880000617
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.1 minDCF =  0.31327862709259013
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.1 minDCF =  0.3368181157702338
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.9 minDCF =  0.45551740224382264
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.9 minDCF =  0.4904519000604165
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.9 minDCF =  0.4196269472846994
+PCA m = 9
+single-fold
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.5 minDCF =  0.1968048088468098
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.5 minDCF =  0.22230209775235354
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.5 minDCF =  0.18975366896351303
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.1 minDCF =  0.425569176882662
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.1 minDCF =  0.4203152364273205
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.1 minDCF =  0.46136785995610247
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.9 minDCF =  0.5156968162803326
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.9 minDCF =  0.5680985630052234
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.9 minDCF =  0.5200636285074067
+no PCA
+k-folds
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.5 minDCF =  0.12976190476190474
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.5 minDCF =  0.13115079365079366
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.5 minDCF =  0.12996031746031747
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.1 minDCF =  0.3392857142857143
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.1 minDCF =  0.34523809523809523
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.1 minDCF =  0.3517857142857143
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.9 minDCF =  0.36071428571428577
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.9 minDCF =  0.3746031746031746
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.9 minDCF =  0.35317460317460325
+PCA m = 11
+k-folds
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.5 minDCF =  0.13194444444444445
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.5 minDCF =  0.12718253968253967
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.5 minDCF =  0.12996031746031744
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.1 minDCF =  0.3571428571428571
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.1 minDCF =  0.3398809523809524
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.1 minDCF =  0.3517857142857143
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.9 minDCF =  0.3658730158730159
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.9 minDCF =  0.3773809523809524
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.9 minDCF =  0.35317460317460325
+PCA m = 10
+k-folds
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.5 minDCF =  0.18234126984126986
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.5 minDCF =  0.17896825396825397
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.5 minDCF =  0.18313492063492065
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.1 minDCF =  0.38333333333333336
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.1 minDCF =  0.3988095238095238
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.1 minDCF =  0.4232142857142857
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.9 minDCF =  0.4976190476190477
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.9 minDCF =  0.5246031746031747
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.9 minDCF =  0.47420634920634924
+PCA m = 9
+k-folds
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.5 minDCF =  0.223015873015873
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.5 minDCF =  0.2255952380952381
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.5 minDCF =  0.2220238095238095
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.1 minDCF =  0.48988095238095236
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.1 minDCF =  0.4922619047619048
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.1 minDCF =  0.5166666666666666
+Lambda =  0.0001 pi_T = 0.5 application with prior: 0.9 minDCF =  0.5621031746031746
+Lambda =  0.0001 pi_T = 0.1 application with prior: 0.9 minDCF =  0.602579365079365
+Lambda =  0.0001 pi_T = 0.9 application with prior: 0.9 minDCF =  0.563888888888889
