@@ -1,0 +1,211 @@
+
+
+MODE =  nb 
+
+
+no PCA
+single-fold
+
+Starting draw with prior 0.5 cfp: 1 cfn: 1
+component: 1 cost: 0.41385296614382183
+component: 2 cost: 0.24327197363087819
+component: 4 cost: 0.2020358063307306
+component: 8 cost: 0.2011486781024633
+component: 16 cost: 0.18111181639504736
+component: 32 cost: 0.22384692449468105
+component: 64 cost: 0.24579570048715577
+
+Starting draw with prior 0.1 cfp: 1 cfn: 1
+component: 1 cost: 0.7250437828371279
+component: 2 cost: 0.5144731911378949
+component: 4 cost: 0.4491086655603056
+component: 8 cost: 0.5272983121620691
+component: 16 cost: 0.4121245956301287
+component: 32 cost: 0.5064890370834894
+component: 64 cost: 0.6020388653935866
+
+Starting draw with prior 0.9 cfp: 1 cfn: 1
+component: 1 cost: 0.7422280684312361
+component: 2 cost: 0.48492264394802653
+component: 4 cost: 0.4858786010905559
+component: 8 cost: 0.5618198364930903
+component: 16 cost: 0.5612768528361337
+component: 32 cost: 0.5766257007165855
+component: 64 cost: 0.5806560160294895
+
+
+Plot done for  ('./GMM/noPCA-singlefold-', 'nb', '.png') 
+
+
+PCA m = 10
+single-fold
+
+Starting draw with prior 0.5 cfp: 1 cfn: 1
+component: 1 cost: 0.18634281387896817
+component: 2 cost: 0.2116106730703049
+component: 4 cost: 0.18363554325132497
+component: 8 cost: 0.1923691677054734
+component: 16 cost: 0.1933710107908442
+component: 32 cost: 0.22482582460863115
+component: 64 cost: 0.250911983113973
+
+Starting draw with prior 0.1 cfp: 1 cfn: 1
+component: 1 cost: 0.3545377373641585
+component: 2 cost: 0.3843100666110936
+component: 4 cost: 0.47244166749516286
+component: 8 cost: 0.3300193485725648
+component: 16 cost: 0.498504883029084
+component: 32 cost: 0.473420567609113
+component: 64 cost: 0.6691547044562898
+
+Starting draw with prior 0.9 cfp: 1 cfn: 1
+component: 1 cost: 0.4274046145963184
+component: 2 cost: 0.49652413982976323
+component: 4 cost: 0.47469007869439206
+component: 8 cost: 0.4482827185891602
+component: 16 cost: 0.4046145963184179
+component: 32 cost: 0.43252089722313575
+component: 64 cost: 0.6190013689306283
+
+
+Plot done for  ./GMM/PCA10-singlefold-nb.png 
+
+
+PCA m = 9
+single-fold
+
+Starting draw with prior 0.5 cfp: 1 cfn: 1
+component: 1 cost: 0.20465130507269097
+component: 2 cost: 0.2423848454026109
+component: 4 cost: 0.1915508683914683
+component: 8 cost: 0.2011486781024633
+component: 16 cost: 0.19248388256257695
+component: 32 cost: 0.20033037878845816
+component: 64 cost: 0.225667066894057
+
+Starting draw with prior 0.1 cfp: 1 cfn: 1
+component: 1 cost: 0.449674592188683
+component: 2 cost: 0.49016128908908757
+component: 4 cost: 0.4919126025742014
+component: 8 cost: 0.47965340817840457
+component: 16 cost: 0.4418969248770639
+component: 32 cost: 0.5251875587913643
+component: 64 cost: 0.5691233490620149
+
+Starting draw with prior 0.9 cfp: 1 cfn: 1
+component: 1 cost: 0.566393135462951
+component: 2 cost: 0.5373243906729174
+component: 4 cost: 0.5430601335280937
+component: 8 cost: 0.49386275514496136
+component: 16 cost: 0.49897903777177866
+component: 32 cost: 0.5487193998118677
+component: 64 cost: 0.6117666852759658
+
+
+Plot done for  ./GMM/PCA9-singlefold-nb.png 
+
+
+no PCA
+k-folds
+
+Starting draw with prior 0.5 cfp: 1 cfn: 1
+component: 1 cost: 0.4541666666666667
+component: 2 cost: 0.22361111111111112
+component: 4 cost: 0.20218253968253969
+component: 8 cost: 0.2003968253968254
+component: 16 cost: 0.20793650793650792
+component: 32 cost: 0.22976190476190478
+component: 64 cost: 0.2650793650793651
+
+Starting draw with prior 0.1 cfp: 1 cfn: 1
+component: 1 cost: 0.7607142857142858
+component: 2 cost: 0.5321428571428571
+component: 4 cost: 0.47916666666666663
+component: 8 cost: 0.45595238095238094
+component: 16 cost: 0.4821428571428572
+component: 32 cost: 0.5666666666666667
+component: 64 cost: 0.7452380952380951
+
+Starting draw with prior 0.9 cfp: 1 cfn: 1
+component: 1 cost: 0.7519841269841271
+component: 2 cost: 0.5343253968253968
+component: 4 cost: 0.5255952380952381
+component: 8 cost: 0.5168650793650794
+component: 16 cost: 0.4716269841269842
+component: 32 cost: 0.518452380952381
+component: 64 cost: 0.6009920634920636
+
+
+Plot done for  ('./GMM/noPCA-kfold-', 'nb', '.png') 
+
+
+
+PCA m = 10
+k-folds
+
+Starting draw with prior 0.5 cfp: 1 cfn: 1
+component: 1 cost: 0.18194444444444446
+component: 2 cost: 0.2515873015873016
+component: 4 cost: 0.2113095238095238
+component: 8 cost: 0.19464285714285715
+component: 16 cost: 0.17539682539682538
+component: 32 cost: 0.20218253968253969
+component: 64 cost: 0.23035714285714287
+
+Starting draw with prior 0.1 cfp: 1 cfn: 1
+component: 1 cost: 0.39880952380952384
+component: 2 cost: 0.6023809523809524
+component: 4 cost: 0.49702380952380953
+component: 8 cost: 0.4982142857142857
+component: 16 cost: 0.5577380952380951
+component: 32 cost: 0.6238095238095238
+component: 64 cost: 0.6648809523809524
+
+Starting draw with prior 0.9 cfp: 1 cfn: 1
+component: 1 cost: 0.495436507936508
+component: 2 cost: 0.5323412698412698
+component: 4 cost: 0.4759920634920635
+component: 8 cost: 0.46924603174603186
+component: 16 cost: 0.4202380952380953
+component: 32 cost: 0.48154761904761906
+component: 64 cost: 0.5857142857142857
+
+
+Plot done for  ./GMM/PCA10-kfold-nb.png 
+
+
+
+PCA m = 9
+k-folds
+
+Starting draw with prior 0.5 cfp: 1 cfn: 1
+component: 1 cost: 0.22162698412698412
+component: 2 cost: 0.26646825396825397
+component: 4 cost: 0.22599206349206347
+component: 8 cost: 0.1998015873015873
+component: 16 cost: 0.19642857142857145
+component: 32 cost: 0.20535714285714285
+component: 64 cost: 0.24623015873015872
+
+Starting draw with prior 0.1 cfp: 1 cfn: 1
+component: 1 cost: 0.5422619047619048
+component: 2 cost: 0.6375
+component: 4 cost: 0.5255952380952381
+component: 8 cost: 0.49940476190476185
+component: 16 cost: 0.49107142857142855
+component: 32 cost: 0.5434523809523809
+component: 64 cost: 0.6720238095238096
+
+Starting draw with prior 0.9 cfp: 1 cfn: 1
+component: 1 cost: 0.585515873015873
+component: 2 cost: 0.609920634920635
+component: 4 cost: 0.5438492063492063
+component: 8 cost: 0.5255952380952381
+component: 16 cost: 0.49126984126984136
+component: 32 cost: 0.5170634920634921
+component: 64 cost: 0.5523809523809524
+
+
+Plot done for  ./GMM/PCA9-kfold-nb.png 
+
+

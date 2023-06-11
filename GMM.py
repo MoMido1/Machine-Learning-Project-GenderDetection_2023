@@ -84,7 +84,8 @@ def findGMMComponents(D, L, maxComp=7):
     None.
     '''
     
-    modes = ['fc', 'nb', 'tc'] # gaussian classifier (full covariance), naive baies, tied covariance
+    modes = ['fc', 'nb','tc'] # gaussian classifier (full covariance), naive baies, tied covariance
+    
     allKFolds = [] 
     evaluationLabels = []
     
@@ -93,9 +94,9 @@ def findGMMComponents(D, L, maxComp=7):
         print("\n\nMODE = ",mode,"\n\n")
         single_fold = True  # flag that shows if we're going to do single or k folds
         for i in range(0,2):    # two iterations: single and k folds   
-            m = 8
-            while (m > 5):  # iterate three times (no pca, pca with m=7 and m=6)
-                if(m == 8):
+            m = 11
+            while (m > 8):  # iterate three times (no pca, pca with m=9 and m=10)
+                if(m == 11):
                     # NO PCA
                     print("no PCA")
                     if (single_fold):
@@ -157,7 +158,7 @@ def execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m
             minDCF.append(cost)
             print("component:", 2**(component), "cost:", cost)
     
-    if(m==8):
+    if(m==11):
         if(single_fold):
             file_name = "./GMM/noPCA-singlefold-",mode,".png"
             plot.plotDCF([2**(component) for component in range(maxComp)], minDCF, "GMM components", file_name, base = 2)
@@ -166,11 +167,11 @@ def execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m
             plot.plotDCF([2**(component) for component in range(maxComp)], minDCF, "GMM components", file_name, base = 2)
     else:
         if(single_fold):
-            file_name = "./GMM/PCA",str(m),"-singlefold-",mode,".png"
-            plot.plotFindC(rangeC, minDCF, "C", file_name)
+            file_name = "./GMM/PCA"+str(m)+"-singlefold-"+mode+".png"
+            plot.plotDCF([2**(component) for component in range(maxComp)], minDCF, "GMM components", file_name, base = 2)
         else:
-            file_name = "./GMM/PCA",str(m),"-kfold-",mode,".png"
-            plot.plotFindC(rangeC, minDCF, "C", file_name)
+            file_name = "./GMM/PCA"+str(m)+"-kfold-"+mode+".png"
+            plot.plotDCF([2**(component) for component in range(maxComp)], minDCF, "GMM components", file_name, base = 2)
     print("\n\nPlot done for ",file_name,"\n\n")
     
     return
@@ -198,9 +199,9 @@ def computeGMM(D, L, components, mode = "fc"):
     single_fold = True  # flag that shows if we're going to do single or k folds
     for model in utils.models:
         for i in range(0,2):    # two iterations: single and k folds   
-            m = 8
-            while (m > 5):  # iterate three times (no pca, pca with m=7 and m=6)
-                if(m == 8):
+            m = 11
+            while (m > 8):  # iterate three times (no pca, pca with m=7 and m=6)
+                if(m == 11):
                     # NO PCA
                     print("no PCA")
                     if (single_fold):
@@ -224,7 +225,6 @@ def computeGMM(D, L, components, mode = "fc"):
                         D_PCA = utils.PCA(D, L, m)
                         allKFolds, evaluationLabels = utils.Kfold(D_PCA, L, None, None, False)
                         execute_GMM(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, components, single_fold, mode, model) 
-                print("components = ", 2**components, "application with prior:", model[0], "minDCF = ", minDCF)   
                 m = m - 1
             single_fold = False
 

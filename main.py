@@ -3,6 +3,8 @@ import plot
 import numpy as np
 import gaussianClassifier as gc
 import logisticRegression as lr
+import GMM
+import scoresRecalibration as sr
 
 
 
@@ -30,9 +32,22 @@ normalizedData = utils.Gaussianization(normalizedData)
 # LOGISTIC REGRESSION 
 # lr.findBestLambda(normalizedData, L)
 
-lambd_lr = 1e-4 # best value of lambda
+# lambd_lr = 1e-4 # best value of lambda
 
-lr.computeLogisticRegression(normalizedData, L, lambd = lambd_lr)
+# lr.computeLogisticRegression(normalizedData, L, lambd = lambd_lr)
 
+
+# GAUSSIAN MIXTURE MODEL
+
+# GMM.findGMMComponents(normalizedData, L, maxComp = 7)
+
+# Best values of components for each model
+nComp_full = 2 # 2^2 = 4
+nComp_diag = 4 # 2^5 = 32
+nComp_tied = 3 # 2^6 = 64
+
+GMM.computeGMM(normalizedData, L, nComp_full, mode = "fc")
+GMM.computeGMM(normalizedData, L, nComp_diag, mode = "nb") 
+GMM.computeGMM(normalizedData, L, nComp_tied, mode = "tc")  
 
 

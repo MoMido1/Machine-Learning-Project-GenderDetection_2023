@@ -76,5 +76,29 @@ def plotDCF(x, y, xlabel, folder_name, text = "", base = 10, ticks = None):
     #plt.savefig(folder_name, dpi=1200)
     return
 
+def plotFindC(x, y, xlabel, folder_name, text = ""):
+    plt.figure()
+    
+    plt.plot(x, y[0:len(x)], label='min DCF prior=0.5 - c = 0 and K=0.0', color='m')
+    plt.plot(x, y[len(x): 2*len(x)], label='min DCF prior=0.5 - c = 0 and K=1.0', color='y')
+    
+    plt.plot(x, y[2*len(x): 3*len(x)], label='min DCF prior=0.5 - c = 1 and K=0.0', color='b')
+    plt.plot(x, y[3*len(x): 4*len(x)], label='min DCF prior=0.5 - c = 1 and K=1.0', color='g')
+    
+    plt.plot(x, y[4*len(x): 5*len(x)], label='min DCF prior=0.5 - c = 15 and K=0.0', color='r')
+    plt.plot(x, y[5*len(x): 6*len(x)], label='min DCF prior=0.5 - c = 15 and K=1.0', color='c')
+
+    plt.xlim([min(x), max(x)])
+    plt.xscale("log")
+    
+    plt.legend(["min DCF prior=0.5 - c = 0 and K=0.0", "min DCF prior=0.5 - c = 0 and K=1.0", 
+                'min DCF prior=0.5 - c = 1 and K=0.0', 'min DCF prior=0.5 - c = 1 and K=1.0', 
+                'min DCF prior=0.5 - c = 15 and K=0.0', 'min DCF prior=0.5 - c = 15 and K=1.0'])
+    plt.xlabel(xlabel)
+    plt.ylabel("min DCF")
+    plt.title(text, pad = 12.0)
+    plt.savefig(folder_name, dpi=1200)
+    
+    return
 
 
