@@ -1,0 +1,3 @@
+Tied-Cov PCA m = 10
+LR PCA m = 10
+GMM PCA m = 10 with 16 components
