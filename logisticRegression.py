@@ -52,7 +52,7 @@ def findBestLambda(D,L):
     single_fold = True  # flag that shows if we're going to do single or k folds
     for i in range(0,2):    # two iterations: single and k folds   
         m = [12,8,10]
-        for m_ in m:  # iterate three times (no pca, pca with m=9 and m=10 and m = 11)
+        for m_ in m:  # iterate three times (no pca, pca with m=8 and m=10 )
             if(m_ == 12):
                 # NO PCA
                 execute_task(D,L,lambdas, single_fold, m_)
@@ -110,7 +110,7 @@ def computeLogisticRegression(D, L, lambd = 1e-4):
     single_fold = True  # flag that shows if we're going to do single or k folds
     for i in range(0,2):    # two iterations: single and k folds   
         m = [12,8,10]
-        for m_ in m :  # iterate four times (no pca, pca with m=9 and m=10 and m =11)
+        for m_ in m :  # iterate four times (no pca, pca with m=10 and m=8)
             if(m_ == 12):
                 # NO PCA
                 print("no PCA")
