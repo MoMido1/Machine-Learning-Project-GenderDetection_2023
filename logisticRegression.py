@@ -51,16 +51,16 @@ def findBestLambda(D,L):
     
     single_fold = True  # flag that shows if we're going to do single or k folds
     for i in range(0,2):    # two iterations: single and k folds   
-        m = 12
-        while (m > 8):  # iterate three times (no pca, pca with m=9 and m=10 and m = 11)
-            if(m == 12):
+        m = [12,8,10]
+        for m_ in m:  # iterate three times (no pca, pca with m=9 and m=10 and m = 11)
+            if(m_ == 12):
                 # NO PCA
-                execute_task(D,L,lambdas, single_fold, m)
+                execute_task(D,L,lambdas, single_fold, m_)
             else:
                 # PCA
-                D_PCA = utils.PCA(D, L, m)
-                execute_task(D_PCA, L, lambdas, single_fold, m)
-            m = m - 1
+                D_PCA = utils.PCA(D, L, m_)
+                execute_task(D_PCA, L, lambdas, single_fold, m_)
+            # m = m - 1
         single_fold = False    
      
 
@@ -109,9 +109,9 @@ def computeLogisticRegression(D, L, lambd = 1e-4):
     
     single_fold = True  # flag that shows if we're going to do single or k folds
     for i in range(0,2):    # two iterations: single and k folds   
-        m = 12
-        while (m > 8):  # iterate four times (no pca, pca with m=9 and m=10 and m =11)
-            if(m == 12):
+        m = [12,8,10]
+        for m_ in m :  # iterate four times (no pca, pca with m=9 and m=10 and m =11)
+            if(m_ == 12):
                 # NO PCA
                 print("no PCA")
                 if (single_fold):
@@ -125,19 +125,19 @@ def computeLogisticRegression(D, L, lambd = 1e-4):
                 
             else:
                 # PCA
-                print("PCA m = %d" %(m))
+                print("PCA m = %d" %(m_))
                 if (single_fold):
                     print("single-fold")
-                    D_PCA = utils.PCA(D, L, m)
+                    D_PCA = utils.PCA(D, L, m_)
                     (DTR, LTR), (DEV, LEV) = utils.single_fold(D_PCA, L, None, None, False)
                     execute_computation(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, lambd, single_fold)
                 else: 
                     print("k-folds")
-                    D_PCA = utils.PCA(D, L, m)
+                    D_PCA = utils.PCA(D, L, m_)
                     allKFolds, evaluationLabels = utils.Kfold(D_PCA, L, None, None, False)
                     execute_computation(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, lambd, single_fold)
                 
-            m = m - 1
+            # m = m - 1
         single_fold = False    
            
     return
