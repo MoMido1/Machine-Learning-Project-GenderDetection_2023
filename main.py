@@ -32,14 +32,14 @@ normalizedData, normalizedMean, normalizedStandardDeviation = utils.ZNormalizati
 # LOGISTIC REGRESSION 
 # lr.findBestLambda(normalizedData, L)
 
-lambd_lr = 1e-4 # best value of lambda
+# lambd_lr = 1e-4 # best value of lambda
 
-lr.computeLogisticRegression(normalizedData, L, lambd = lambd_lr)
+# lr.computeLogisticRegression(normalizedData, L, lambd = lambd_lr)
 
 
 # GAUSSIAN MIXTURE MODEL
 
-# GMM.findGMMComponents(normalizedData, L, maxComp = 7)
+GMM.findGMMComponents(normalizedData, L, maxComp = 7)
 
 # Best values of components for each model
 # nComp_full = 2 # 2^2 = 4

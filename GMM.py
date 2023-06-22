@@ -84,7 +84,8 @@ def findGMMComponents(D, L, maxComp=7):
     None.
     '''
     
-    modes = ['fc', 'nb','tc'] # gaussian classifier (full covariance), naive baies, tied covariance
+    # modes = ['fc', 'nb','tc'] # gaussian classifier (full covariance), naive baies, tied covariance
+    modes = ['tc']
     
     allKFolds = [] 
     evaluationLabels = []
@@ -94,33 +95,33 @@ def findGMMComponents(D, L, maxComp=7):
         print("\n\nMODE = ",mode,"\n\n")
         single_fold = True  # flag that shows if we're going to do single or k folds
         for i in range(0,2):    # two iterations: single and k folds   
-            m = 11
-            while (m > 8):  # iterate three times (no pca, pca with m=9 and m=10)
-                if(m == 11):
+            m = [12,8,10]
+            for m_ in m:  # iterate three times (no pca, pca with m=8 and m=10s)
+                if(m_ == 12):
                     # NO PCA
                     print("no PCA")
                     if (single_fold):
                         print("single-fold")
                         (DTR, LTR), (DEV, LEV) = utils.single_fold(D, L, None, None, False)
-                        execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m, maxComp, mode)   
+                        execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m_, maxComp, mode)   
                     else: 
                         print("k-folds")
                         allKFolds, evaluationLabels = utils.Kfold(D, L, None, None, False)
-                        execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m, maxComp, mode)       
+                        execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m_, maxComp, mode)       
                 else:
                     # PCA
-                    print("PCA m = %d" %(m))
+                    print("PCA m = %d" %(m_))
                     if (single_fold):
                         print("single-fold")
-                        D_PCA = utils.PCA(D, L, m)
+                        D_PCA = utils.PCA(D, L, m_)
                         (DTR, LTR), (DEV, LEV) = utils.single_fold(D_PCA, L, None, None, False)
-                        execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m, maxComp, mode)  
+                        execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m_, maxComp, mode)  
                     else: 
                         print("k-folds")
-                        D_PCA = utils.PCA(D, L, m)
+                        D_PCA = utils.PCA(D, L, m_)
                         allKFolds, evaluationLabels = utils.Kfold(D_PCA, L, None, None, False)
-                        execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m, maxComp, mode)      
-                m = m - 1
+                        execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m_, maxComp, mode)      
+                # m = m - 1
             single_fold = False
         
     print("\n\nFINISH PLOTS FOR GMM")
@@ -158,7 +159,7 @@ def execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m
             minDCF.append(cost)
             print("component:", 2**(component), "cost:", cost)
     
-    if(m==11):
+    if(m==12):
         if(single_fold):
             file_name = "./GMM/noPCA-singlefold-",mode,".png"
             plot.plotDCF([2**(component) for component in range(maxComp)], minDCF, "GMM components", file_name, base = 2)
@@ -199,9 +200,9 @@ def computeGMM(D, L, components, mode = "fc"):
     single_fold = True  # flag that shows if we're going to do single or k folds
     for model in utils.models:
         for i in range(0,2):    # two iterations: single and k folds   
-            m = 11
-            while (m > 8):  # iterate three times (no pca, pca with m=7 and m=6)
-                if(m == 11):
+            m = [12,8,10]
+            for m_ in m:  # iterate three times (no pca, pca with m=7 and m=6)
+                if(m_ == 12):
                     # NO PCA
                     print("no PCA")
                     if (single_fold):
@@ -214,18 +215,18 @@ def computeGMM(D, L, components, mode = "fc"):
                         execute_GMM(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, components, single_fold, mode, model)  
                 else:
                     # PCA
-                    print("PCA m = %d" %(m))
+                    print("PCA m = %d" %(m_))
                     if (single_fold):
                         print("single-fold")
-                        D_PCA = utils.PCA(D, L, m)
+                        D_PCA = utils.PCA(D, L, m_)
                         (DTR, LTR), (DEV, LEV) = utils.single_fold(D_PCA, L, None, None, False)
                         execute_GMM(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, components, single_fold, mode, model)
                     else: 
                         print("k-folds")
-                        D_PCA = utils.PCA(D, L, m)
+                        D_PCA = utils.PCA(D, L, m_)
                         allKFolds, evaluationLabels = utils.Kfold(D_PCA, L, None, None, False)
                         execute_GMM(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, components, single_fold, mode, model) 
-                m = m - 1
+                # m = m - 1
             single_fold = False
 
     return
