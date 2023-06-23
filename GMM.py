@@ -84,8 +84,8 @@ def findGMMComponents(D, L, maxComp=7):
     None.
     '''
     
-    # modes = ['fc', 'nb','tc'] # gaussian classifier (full covariance), naive baies, tied covariance
-    modes = ['tc']
+    modes = ['fc', 'nb','tc'] # gaussian classifier (full covariance), naive baies, tied covariance
+    
     
     allKFolds = [] 
     evaluationLabels = []
