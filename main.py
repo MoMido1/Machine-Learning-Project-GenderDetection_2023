@@ -16,7 +16,7 @@ print("Number of training samples for the female class: " + str(D[:, L==1].shape
 print("Number of features: " + str(D.shape[0]))
 
 # Features exploration
-plot.plotFeatures(D, L, utils.features_list, utils.classes_list, "original")
+# plot.plotFeatures(D, L, utils.features_list, utils.classes_list, "original")
 normalizedData, normalizedMean, normalizedStandardDeviation = utils.ZNormalization(D)
 # normalizedData = utils.Gaussianization(normalizedData)
 #plot.plotFeatures(normalizedData, L, utils.features_list, utils.classes_list, "normalized-gaussianized")
@@ -39,15 +39,15 @@ normalizedData, normalizedMean, normalizedStandardDeviation = utils.ZNormalizati
 
 # GAUSSIAN MIXTURE MODEL
 
-GMM.findGMMComponents(normalizedData, L, maxComp = 7)
+# GMM.findGMMComponents(normalizedData, L, maxComp = 7)
 
 # Best values of components for each model
-# nComp_full = 2 # 2^2 = 4
-# nComp_diag = 4 # 2^5 = 32
-# nComp_tied = 3 # 2^6 = 64
+nComp_full = 2 # 2^2 = 4
+nComp_diag = 4 # 2^5 = 32
+nComp_tied = 3 # 2^6 = 64
 
-# GMM.computeGMM(normalizedData, L, nComp_full, mode = "fc")
-# GMM.computeGMM(normalizedData, L, nComp_diag, mode = "nb") 
-# GMM.computeGMM(normalizedData, L, nComp_tied, mode = "tc")  
+GMM.computeGMM(normalizedData, L, nComp_full, mode = "fc")
+GMM.computeGMM(normalizedData, L, nComp_diag, mode = "nb") 
+GMM.computeGMM(normalizedData, L, nComp_tied, mode = "tc")  
 
 
