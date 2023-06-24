@@ -34,7 +34,7 @@ normalizedData, normalizedMean, normalizedStandardDeviation = utils.ZNormalizati
 
 # lambd_lr = 1e-4 # best value of lambda
 
-# lr.computeLogisticRegression(normalizedData, L, lambd = lambd_lr)
+lr.computeLogisticRegression(normalizedData, L, lambd = lambd_lr)
 
 
 # GAUSSIAN MIXTURE MODEL
