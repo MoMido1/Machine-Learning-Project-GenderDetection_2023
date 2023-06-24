@@ -197,8 +197,8 @@ def computeGMM(D, L, components, mode = "fc"):
     allKFolds = [] 
     evaluationLabels = []
     
-    single_fold = True  # flag that shows if we're going to do single or k folds
     for model in utils.models:
+        single_fold = True  # flag that shows if we're going to do single or k folds
         for i in range(0,2):    # two iterations: single and k folds   
             m = [12,8,10]
             for m_ in m:  # iterate three times (no pca, pca with m=7 and m=6)
