@@ -1,5 +1,3 @@
-
-
 import numpy as np
 import scipy.optimize
 import utils
@@ -60,7 +58,7 @@ def findBestLambda(D,L):
                 # PCA
                 D_PCA = utils.PCA(D, L, m_)
                 execute_task(D_PCA, L, lambdas, single_fold, m_)
-            # m = m - 1
+                
         single_fold = False    
      
 
@@ -136,8 +134,7 @@ def computeLogisticRegression(D, L, lambd = 1e-4):
                     D_PCA = utils.PCA(D, L, m_)
                     allKFolds, evaluationLabels = utils.Kfold(D_PCA, L, None, None, False)
                     execute_computation(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, lambd, single_fold)
-                
-            # m = m - 1
+        
         single_fold = False    
            
     return

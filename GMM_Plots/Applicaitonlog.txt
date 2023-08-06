@@ -1,203 +1,186 @@
-Number of training samples for the male class: 720
-Number of training samples for the female class: 1680
-Number of features: 12
 MODE = fc
 no PCA
 single-fold
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.5 minDCF =  0.07603300728821726
+components =  4 application with prior: 0.5 minDCF =  0.07514587905994999
+PCA m = 8
+single-fold
+components =  4 application with prior: 0.5 minDCF =  0.1618014821159538
 PCA m = 10
 single-fold
-components =  4 application with prior: 0.5 minDCF =  0.11715445973126132
-PCA m = 9
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.5 minDCF =  0.10837494933427144
+no PCA
+k-folds
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.5 minDCF =  0.07123015873015873
+PCA m = 8
+k-folds
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.5 minDCF =  0.18075396825396825
+PCA m = 10
+k-folds
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.5 minDCF =  0.1121031746031746
+no PCA
 single-fold
-components =  4 application with prior: 0.5 minDCF =  0.12149832898691486
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.1 minDCF =  0.1618932540016366
+PCA m = 8
+single-fold
+components =  4 application with prior: 0.1 minDCF =  0.45065349230263313
+PCA m = 10
+single-fold
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.1 minDCF =  0.24147477420292293
 no PCA
 k-folds
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.1 minDCF =  0.2005952380952381
+PCA m = 8
+k-folds
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.5 minDCF =  0.07797619047619048
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.1 minDCF =  0.44940476190476186
 PCA m = 10
 k-folds
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.1 minDCF =  0.256547619047619
+no PCA
+single-fold
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.9 minDCF =  0.1651893942290779
+PCA m = 8
+single-fold
+components =  4 application with prior: 0.9 minDCF =  0.3820310647833036
+PCA m = 10
+single-fold
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.5 minDCF =  0.12182539682539684
-PCA m = 9
-k-folds
-components =  4 application with prior: 0.5 minDCF =  0.12777777777777777
+components =  4 application with prior: 0.9 minDCF =  0.22632476540811722
 no PCA
 k-folds
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.9 minDCF =  0.2037698412698413
+PCA m = 8
+k-folds
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.1 minDCF =  0.2482142857142857
+ERROR, LOG-LIKELIHOOD IS NOT INCREASING
+components =  4 application with prior: 0.9 minDCF =  0.42678571428571427
 PCA m = 10
 k-folds
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
 ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.1 minDCF =  0.3523809523809524
-PCA m = 9
-k-folds
-components =  4 application with prior: 0.1 minDCF =  0.35000000000000003
-no PCA
-k-folds
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.1 minDCF =  0.2482142857142857
-PCA m = 10
-k-folds
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.1 minDCF =  0.3523809523809524
-PCA m = 9
-k-folds
-components =  4 application with prior: 0.1 minDCF =  0.35000000000000003
-no PCA
-k-folds
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.9 minDCF =  0.20992063492063492
-PCA m = 10
-k-folds
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.9 minDCF =  0.2839285714285715
-PCA m = 9
-k-folds
-components =  4 application with prior: 0.9 minDCF =  0.29325396825396827
-no PCA
-k-folds
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.9 minDCF =  0.20992063492063492
-PCA m = 10
-k-folds
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-ERROR, LOG-LIKELIHOOD IS NOT INCREASING
-components =  4 application with prior: 0.9 minDCF =  0.2839285714285715
-PCA m = 9
-k-folds
-components =  4 application with prior: 0.9 minDCF =  0.29325396825396827
-
-
+components =  4 application with prior: 0.9 minDCF =  0.27341269841269844
 MODE = nb
 no PCA
 single-fold
-components =  16 application with prior: 0.5 minDCF =  0.18111181639504736
+components =  16 application with prior: 0.5 minDCF =  0.1661453513716073
+PCA m = 8
+single-fold
+components =  16 application with prior: 0.5 minDCF =  0.22816785077891388
 PCA m = 10
 single-fold
-components =  16 application with prior: 0.5 minDCF =  0.1933710107908442
-PCA m = 9
+components =  16 application with prior: 0.5 minDCF =  0.1802246881667801
+no PCA
+k-folds
+components =  16 application with prior: 0.5 minDCF =  0.19682539682539685
+PCA m = 8
+k-folds
+components =  16 application with prior: 0.5 minDCF =  0.21607142857142858
+PCA m = 10
+k-folds
+components =  16 application with prior: 0.5 minDCF =  0.18154761904761904
+no PCA
 single-fold
-components =  16 application with prior: 0.5 minDCF =  0.19248388256257695
+components =  16 application with prior: 0.1 minDCF =  0.3955903608929405
+PCA m = 8
+single-fold
+components =  16 application with prior: 0.1 minDCF =  0.4969600562867566
+PCA m = 10
+single-fold
+components =  16 application with prior: 0.1 minDCF =  0.4654364135547075
 no PCA
 k-folds
-components =  16 application with prior: 0.5 minDCF =  0.20793650793650792
+components =  16 application with prior: 0.1 minDCF =  0.5011904761904762
+PCA m = 8
+k-folds
+components =  16 application with prior: 0.1 minDCF =  0.580952380952381
 PCA m = 10
 k-folds
-components =  16 application with prior: 0.5 minDCF =  0.17539682539682538
-PCA m = 9
-k-folds
-components =  16 application with prior: 0.5 minDCF =  0.19642857142857145
+components =  16 application with prior: 0.1 minDCF =  0.4994047619047619
+no PCA
+single-fold
+components =  16 application with prior: 0.9 minDCF =  0.4686178389250454
+PCA m = 8
+single-fold
+components =  16 application with prior: 0.9 minDCF =  0.6376310617242408
+PCA m = 10
+single-fold
+components =  16 application with prior: 0.9 minDCF =  0.41259875037282334
 no PCA
 k-folds
-components =  16 application with prior: 0.1 minDCF =  0.4821428571428572
+components =  16 application with prior: 0.9 minDCF =  0.47440476190476194
+PCA m = 8
+k-folds
+components =  16 application with prior: 0.9 minDCF =  0.597420634920635
 PCA m = 10
 k-folds
-components =  16 application with prior: 0.1 minDCF =  0.5577380952380951
-PCA m = 9
-k-folds
-components =  16 application with prior: 0.1 minDCF =  0.49107142857142855
-no PCA
-k-folds
-components =  16 application with prior: 0.1 minDCF =  0.4821428571428572
-PCA m = 10
-k-folds
-components =  16 application with prior: 0.1 minDCF =  0.5577380952380951
-PCA m = 9
-k-folds
-components =  16 application with prior: 0.1 minDCF =  0.49107142857142855
-no PCA
-k-folds
-components =  16 application with prior: 0.9 minDCF =  0.4716269841269842
-PCA m = 10
-k-folds
-components =  16 application with prior: 0.9 minDCF =  0.4202380952380953
-PCA m = 9
-k-folds
-components =  16 application with prior: 0.9 minDCF =  0.49126984126984136
-no PCA
-k-folds
-components =  16 application with prior: 0.9 minDCF =  0.4716269841269842
-PCA m = 10
-k-folds
-components =  16 application with prior: 0.9 minDCF =  0.4202380952380953
-PCA m = 9
-k-folds
-components =  16 application with prior: 0.9 minDCF =  0.49126984126984136
-
-
+components =  16 application with prior: 0.9 minDCF =  0.47976190476190483
 MODE = tc
 no PCA
 single-fold
-components =  8 application with prior: 0.5 minDCF =  0.07166619506114302
+components =  8 application with prior: 0.5 minDCF =  0.061204200093301415
+PCA m = 8
+single-fold
+components =  8 application with prior: 0.5 minDCF =  0.17931461696709214
 PCA m = 10
 single-fold
-components =  8 application with prior: 0.5 minDCF =  0.10753370704884559
-PCA m = 9
+components =  8 application with prior: 0.5 minDCF =  0.10928502053395941
+no PCA
+k-folds
+components =  8 application with prior: 0.5 minDCF =  0.06666666666666667
+PCA m = 8
+k-folds
+components =  8 application with prior: 0.5 minDCF =  0.18273809523809523
+PCA m = 10
+k-folds
+components =  8 application with prior: 0.5 minDCF =  0.12142857142857141
+no PCA
 single-fold
-components =  8 application with prior: 0.5 minDCF =  0.10933090647680083
+components =  8 application with prior: 0.1 minDCF =  0.18893536964950788
+PCA m = 8
+single-fold
+components =  8 application with prior: 0.1 minDCF =  0.44833625218914186
+PCA m = 10
+single-fold
+components =  8 application with prior: 0.1 minDCF =  0.30004053258284324
 no PCA
 k-folds
-components =  8 application with prior: 0.5 minDCF =  0.08015873015873015
+components =  8 application with prior: 0.1 minDCF =  0.23154761904761903
+PCA m = 8
+k-folds
+components =  8 application with prior: 0.1 minDCF =  0.44583333333333336
 PCA m = 10
 k-folds
-components =  8 application with prior: 0.5 minDCF =  0.11825396825396825
-PCA m = 9
-k-folds
-components =  8 application with prior: 0.5 minDCF =  0.12123015873015874
+components =  8 application with prior: 0.1 minDCF =  0.3119047619047619
+no PCA
+single-fold
+components =  8 application with prior: 0.9 minDCF =  0.15208895754785523
+PCA m = 8
+single-fold
+components =  8 application with prior: 0.9 minDCF =  0.35487423427832887
+PCA m = 10
+single-fold
+components =  8 application with prior: 0.9 minDCF =  0.2578484081401663
 no PCA
 k-folds
-components =  8 application with prior: 0.1 minDCF =  0.2755952380952381
+components =  8 application with prior: 0.9 minDCF =  0.1930555555555556
+PCA m = 8
+k-folds
+components =  8 application with prior: 0.9 minDCF =  0.43849206349206354
 PCA m = 10
 k-folds
-components =  8 application with prior: 0.1 minDCF =  0.3190476190476191
-PCA m = 9
-k-folds
-components =  8 application with prior: 0.1 minDCF =  0.28154761904761905
-no PCA
-k-folds
-components =  8 application with prior: 0.1 minDCF =  0.2755952380952381
-PCA m = 10
-k-folds
-components =  8 application with prior: 0.1 minDCF =  0.3190476190476191
-PCA m = 9
-k-folds
-components =  8 application with prior: 0.1 minDCF =  0.28154761904761905
-no PCA
-k-folds
-components =  8 application with prior: 0.9 minDCF =  0.21964285714285717
-PCA m = 10
-k-folds
-components =  8 application with prior: 0.9 minDCF =  0.29503968253968255
-PCA m = 9
-k-folds
-components =  8 application with prior: 0.9 minDCF =  0.29166666666666674
-no PCA
-k-folds
-components =  8 application with prior: 0.9 minDCF =  0.21964285714285717
-PCA m = 10
-k-folds
-components =  8 application with prior: 0.9 minDCF =  0.29503968253968255
-PCA m = 9
-k-folds
-components =  8 application with prior: 0.9 minDCF =  0.29166666666666674
+components =  8 application with prior: 0.9 minDCF =  0.29444444444444445

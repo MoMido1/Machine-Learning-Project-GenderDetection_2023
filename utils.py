@@ -1,10 +1,7 @@
 import numpy as np
 from scipy.stats import norm
 
-
-
 models = [ [0.5, 1, 1], [0.1, 1, 1], [0.9, 1, 1] ]  # [pi, cfp, cfn]
-
 classes_list = ["Male", "Female"]
 features_list = ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12"]
 
@@ -37,36 +34,13 @@ def load(filename):
     
     return dataset_matrix, labels_array
 
+
 # Transform the data into a distribution with 0 mean and 1 variance
-def ZNormalization(D):
+def ZNormalization(D, mu = None, sigma = None):
     mu = D.mean(axis=1)
     sigma = D.std(axis=1)
     normalizedData = (D - mcol(mu)) / mcol(sigma)
     return normalizedData, mu, sigma
-
-# Perform gaussianization
-def Gaussianization(D):
-    
-    TD = np.zeros(D.shape)
-    
-    '''
-    ranks=[]
-    for j in range(D.shape[0]):
-        tempSum=0
-        for i in range(TD.shape[1]):
-            tempSum+=(D[j, :]<TD[j, i]).astype(int)
-        tempSum+=1
-        ranks.append(tempSum/(TD.shape[1]+2))
-    y = norm.ppf(ranks)
-    '''
-    
-    for i in range(D.shape[1]):
-        x = D[:,i]
-        count = np.sum(x.reshape((x.shape[0],1))>D,axis=1)
-        rank = (count+1)/ (D.shape[1]+2)
-        TD[:,i]= norm.ppf(rank)
-     
-    return TD
 
 
 # Single fold
@@ -159,6 +133,22 @@ def Kfold(D, L, trainModel=None, getScores=None, train=True, K=5, seed=0):
 DIMENSIONALITY REDUCTION
 
 """
+# Compute the minimum number of principal components that keep at least 100*t % of the original information
+def min_principal_comps(D, t=0.99):
+    
+    cov_matrix = covarianceMatrix(D) # covariance matrix
+    
+    eigenvalues, _ = np.linalg.eigh(cov_matrix)
+    sorted_eigenvalues = np.sort(eigenvalues)[::-1]
+    
+    # Calculate the cumulative sum of eigenvalues
+    cum_sum = np.cumsum(sorted_eigenvalues)
+    total_sum = np.sum(sorted_eigenvalues)
+    
+    # Find the minimum number of principal components that retain at least 95% of the original information
+    min_components = np.argmax(cum_sum >= t * total_sum) + 1
+    
+    return min_components
 
 def PCA(D, L, m):
     
@@ -262,3 +252,49 @@ def normalized_dc (DCF, pi1, cfn, cfp):
     i = np.argmin(temp) # index of the optimal dummy system
     
     return DCF/temp[i] # normalized DCF
+
+def compute_actual_DCF(llr, labels, pi1, cfn, cfp):
+    
+    predictions = (llr > ( -np.log(pi1/(1 - pi1)))).astype(int)
+    
+    CM = confusionMatrix(predictions, labels, 2)
+    DCFu = evaluationBinaryTask(pi1, cfn, cfp, CM)
+        
+    normalizedDCF = normalizedEvaluationBinaryTask(pi1, cfn, cfp, DCFu)
+        
+    return normalizedDCF
+
+
+def evaluationBinaryTask(pi1, Cfn, Cfp, confMatrix):
+    # Compute FNR and FPR
+    FNR = confMatrix[0][1]/(confMatrix[0][1]+confMatrix[1][1])
+    FPR = confMatrix[1][0]/(confMatrix[0][0]+confMatrix[1][0])
+    # Compute empirical Bayes risk, that is the cost that we pay due to our
+    # decisions c* for the test data.
+    DCFu = pi1*Cfn*FNR+(1-pi1)*Cfp*FPR
+    return DCFu
+
+def normalizedEvaluationBinaryTask(pi1, Cfn, Cfp, DCFu):
+    # Define vector with dummy costs
+    dummyCosts = np.array([pi1*Cfn, (1-pi1)*Cfp])
+    # Compute risk for an optimal dummy system
+    index = np.argmin(dummyCosts)
+    # Compute normalized DCF
+    DCFn = DCFu/dummyCosts[index]
+    return DCFn
+
+
+def computeOptimalBayesDecisionBinaryTaskTHRESHOLD(llrs, labels, t):
+    # if llr > threshold => predict 1
+    # If llr <= threshold => predict 0
+    predictions = (llrs > t).astype(int)
+    
+    m = confusionMatrix(predictions, labels, 2)
+    return m
+
+def computeFPRTPR(pi1, Cfn, Cfp, confMatrix):
+    # Compute FNR and FPR
+    FNR = confMatrix[0][1]/(confMatrix[0][1]+confMatrix[1][1])
+    TPR = 1-FNR
+    FPR = confMatrix[1][0]/(confMatrix[0][0]+confMatrix[1][0])
+    return (FPR, TPR)

@@ -121,7 +121,7 @@ def findGMMComponents(D, L, maxComp=7):
                         D_PCA = utils.PCA(D, L, m_)
                         allKFolds, evaluationLabels = utils.Kfold(D_PCA, L, None, None, False)
                         execute_find(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, single_fold, m_, maxComp, mode)      
-                # m = m - 1
+        
             single_fold = False
         
     print("\n\nFINISH PLOTS FOR GMM")
@@ -226,7 +226,7 @@ def computeGMM(D, L, components, mode = "fc"):
                         D_PCA = utils.PCA(D, L, m_)
                         allKFolds, evaluationLabels = utils.Kfold(D_PCA, L, None, None, False)
                         execute_GMM(DTR, LTR, DEV, LEV, allKFolds, evaluationLabels, components, single_fold, mode, model) 
-                # m = m - 1
+    
             single_fold = False
 
     return

@@ -103,10 +103,10 @@ def computeMVGClassifier (D,L):
     print("%.3f  %.3f  %.3f  %.3f  %.3f  %.3f" %(res1, res2, res3, res4, res5, res6))
     
     
-    m = 11
+    m_list = (10, 8)
     modes = ['fc', 'nb', 'tc']
     messages = ['Full Covariance', 'Diagonal Covariance', 'Tied Covariance']
-    while ( m > 8 ):
+    for m in m_list:
         print("\nPCA m = %d" %(m))
         for mode, msg in zip(modes, messages):
         
@@ -116,7 +116,7 @@ def computeMVGClassifier (D,L):
             
             print(msg)
             print("%.3f  %.3f  %.3f  %.3f  %.3f  %.3f" %(res1, res2, res3, res4, res5, res6))
-        m = m - 1
+        
     
     
     return
